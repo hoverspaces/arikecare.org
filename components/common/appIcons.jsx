@@ -112,7 +112,6 @@ export const FacebookIcon = ({ style, className = defaultClassName }) => (
     />
     <mask
       id="mask0_1_356"
-      style={{ maskType: "luminance" }}
       maskUnits="userSpaceOnUse"
       x="7"
       y="3"
@@ -157,6 +156,20 @@ export const GoogleIcon = ({ style, className = defaultClassName }) => (
       d="M7 11v2.4h3.97c-.16 1.029-1.2 3.02-3.97 3.02-2.39 0-4.34-1.979-4.34-4.42 0-2.44 1.95-4.42 4.34-4.42 1.36 0 2.27.58 2.79 1.08l1.9-1.83c-1.22-1.14-2.8-1.83-4.69-1.83-3.87 0-7 3.13-7 7s3.13 7 7 7c4.04 0 6.721-2.84 6.721-6.84 0-.46-.051-.81-.111-1.16h-6.61zm0 0 17 2h-3v3h-2v-3h-3v-2h3v-3h2v3h3v2z"
       fill-rule="evenodd"
       clip-rule="evenodd"
+    />
+  </svg>
+);
+
+export const PlayIcon = ({ style, className = defaultClassName }) => (
+  <svg
+    className={className}
+    style={style}
+    fill="currentColor"
+    viewBox="0 0 260 180"
+  >
+    <path
+      d="M220,2H40C19.01,2,2,19.01,2,40v100c0,20.99,17.01,38,38,38h180c20.99,0,38-17.01,38-38V40C258,19.01,240.99,2,220,2z
+	 M102,130V50l68,40L102,130z"
     />
   </svg>
 );

@@ -5,14 +5,12 @@ import { volunteerPageData } from "@/data/volunteerPageData";
 export default function Volunteer() {
   return (
     <div className="mb-20">
-      <div
-        style={{ height: "30rem" }}
-        className="w-full relative overflow-hidden"
-      >
-        <img
+      <div className="h-96 w-full relative overflow-hidden">
+        <Image
           className="absolute inset-0 w-full h-full object-cover"
           src="/home-cover-1.jpg"
           alt=""
+          fill
         />
         <div className="px-5 mx-auto text-white absolute inset-0 bg-gray-900 z-20 bg-opacity-40 flex flex-col justify-center gap-5">
           <div className="mt-20 flex-grow w-full max-w-6xl mx-auto flex flex-col justify-center">

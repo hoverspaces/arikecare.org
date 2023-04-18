@@ -15,7 +15,7 @@ export const social = [
     label: "Website",
     icon: GoogleIcon,
     href: "/",
-    defaultClassName: "h-6 w-5",
+    defaultClassName: "h-5 w-5",
   },
   {
     label: "Twitter",

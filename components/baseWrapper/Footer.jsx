@@ -1,7 +1,10 @@
 import React from "react";
+import { useRouter } from "next/router";
 import Image from "next/image";
+
 import { contact } from "@/data/contact";
 import { social } from "@/data/social";
+import Link from "next/link";
 
 const navigation = [
   { label: "Home", href: "/" },
@@ -10,6 +13,8 @@ const navigation = [
 ];
 
 export default function Footer() {
+  const router = useRouter();
+
   return (
     <footer className="text-gray-100 bg-gray-700">
       <h2 id="footerHeading" className="sr-only">
@@ -29,14 +34,14 @@ export default function Footer() {
               {social
                 .filter((val) => val.label !== "Twitter")
                 .map((item, index) => (
-                  <a
+                  <Link
                     key={index}
                     href={item.href}
                     className="hover:text-green-200"
                   >
                     <span className="sr-only">{item.label}</span>
                     <item.icon className={item.defaultClassName} />
-                  </a>
+                  </Link>
                 ))}
             </div>
           </div>
@@ -50,25 +55,25 @@ export default function Footer() {
 
               <li className="flex flex-row gap-1 items-center flex-wrap">
                 Phone:
-                <a
+                <Link
                   href={contact.phone.value}
                   className={
                     "text-sm transform delay-100 flex flex-row items-start justify-center gap-2 hover:text-green-200"
                   }
                 >
                   {contact.phone.label}
-                </a>
+                </Link>
               </li>
               <li className="flex flex-row gap-1 items-center flex-wrap">
                 Email:
-                <a
+                <Link
                   href={contact.email.value}
                   className={
                     "text-sm transform delay-100 flex flex-row items-start justify-center gap-2 hover:text-green-200"
                   }
                 >
                   {contact.email.label}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -79,12 +84,17 @@ export default function Footer() {
             <div className="mt-4 flex flex-col gap-3">
               {navigation.map((item) => (
                 <div key={item.label}>
-                  <a
+                  <Link
                     href={item.href}
-                    className="text-sm transform delay-100 hover:text-green-200"
+                    className={
+                      "text-sm transform delay-100 " +
+                      (router.pathname === item.href
+                        ? "text-green-200"
+                        : "hover:text-green-200")
+                    }
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>

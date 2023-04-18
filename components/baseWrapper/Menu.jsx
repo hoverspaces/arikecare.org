@@ -46,10 +46,7 @@ export default function SidebarMenu({ parentShow, parentSetShow, className }) {
           onClick={(e) => e.stopPropagation()}
           className="bg-gray-700 h-full w-screen sm:w-auto transition-all duration-300"
         >
-          <div
-            style={{ overflow: "scroll" }}
-            className="overflow-y-auto h-screen flex flex-col justify-around"
-          >
+          <div className="overflow-y-auto h-screen flex flex-col justify-around">
             <nav className="h-full flex flex-col flex-wrap text-base justify-between mt-10 pl-12 pr-16 sm:pr-28 py-7">
               <button
                 onClick={() => {

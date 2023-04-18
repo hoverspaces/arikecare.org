@@ -14,15 +14,12 @@ import { social } from "@/data/social";
 export default function Contact() {
   return (
     <div className="mb-20">
-      <div
-        style={{ height: "30rem" }}
-        className="w-full relative overflow-hidden"
-      >
+      <div className="h-96 w-full relative overflow-hidden">
         <Image
           className="absolute inset-0 w-full object-cover"
           src="/contacts.jpg"
           alt=""
-          layout="fill"
+          fill
         />
         <div className="px-5 mx-auto max-w-6xl text-white absolute inset-0 bg-gray-600 z-20 bg-opacity-10 flex flex-col justify-center gap-5">
           <span className="text-3xl"> arike</span>
@@ -35,9 +32,9 @@ export default function Contact() {
       </div>
       <div className="px-5 mt-20 mx-auto max-w-6xl">
         <div className="text-gray-700 font-semibold grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-4">
-          <div className="flex flex-col gap-5 items-center">
-            <LocationIcon style={{ height: "45px" }} />
-            <span style={{ maxWidth: "16rem" }} className="mx-auto text-center">
+          <div className="flex flex-col items-center">
+            <LocationIcon className="mb-6 h-16 w-12" />
+            <span className="-mt-3 max-w-xs mx-auto text-center">
               Adress: Arike, 65/2265, BRRA 65, Bank Rd, Kaloor, Ernakulam,
               Kerala 682017
             </span>
@@ -68,14 +65,14 @@ export default function Contact() {
               {social
                 .filter((val) => val.label !== "Twitter")
                 .map((item, index) => (
-                  <a
+                  <Link
                     key={index}
                     href={item.href}
                     className="hover:text-gray-400"
                   >
                     <span className="sr-only">{item.label}</span>
                     <item.icon className={item.defaultClassName} />
-                  </a>
+                  </Link>
                 ))}
             </div>
           </div>

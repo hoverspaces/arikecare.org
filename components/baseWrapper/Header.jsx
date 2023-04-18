@@ -27,10 +27,7 @@ export default function Header() {
         }}
       />
       <header className="text-gray-600 bg-white body-font shadow-xl">
-        <div
-          style={{ maxWidth: "1800px" }}
-          className="mx-auto flex flex-row justify-between"
-        >
+        <div className="mx-auto flex flex-row justify-between max-w-7xl">
           <Link href="/">
             <div className="ml-6 sm:ml-16 h-full flex flex-row gap-4 items-center title-font cursor-pointer font-medium text-gray-900">
               <button
@@ -48,7 +45,6 @@ export default function Header() {
               return (
                 <Link href={item.link} key={index}>
                   <div
-                    style={{ color: "#211C52", fontWeight: "500" }}
                     className={
                       "h-full flex flex-col mr-5 transform duration-100 whitespace-pre cursor-pointer"
                     }
@@ -56,13 +52,11 @@ export default function Header() {
                     onMouseLeave={() => setHover(null)}
                   >
                     <div
-                      style={
-                        hover === item.link || router.pathname === item.link
-                          ? { width: "100%" }
-                          : { width: "0px" }
-                      }
                       className={
-                        "rounded-full transition-all ease-in-out h-0.5 mt-px bg-gray-700 duration-500 "
+                        "rounded-full transition-all ease-in-out h-0.5 mt-px bg-gray-700 duration-500 " +
+                        (hover === item.link || router.pathname === item.link
+                          ? "w-full"
+                          : "w-0")
                       }
                     />
 
