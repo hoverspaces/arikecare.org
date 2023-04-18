@@ -1,9 +1,8 @@
 const defaultClassName = "h-4";
 
-export const LocationIcon = ({ className, style }) => (
+export const LocationIcon = ({ className }) => (
   <svg
     className={`${defaultClassName} ${className}`}
-    style={style}
     xmlns="http://www.w3.org/2000/svg"
     fill="currentColor"
     viewBox="0 0 1024 1024"
@@ -19,7 +18,6 @@ export const LocationIcon = ({ className, style }) => (
 export const MenuIcon = ({ style, className = defaultClassName }) => (
   <svg
     className={className}
-    style={style}
     fill="currentColor"
     viewBox="0 0 20 12"
     xmlns="http://www.w3.org/2000/svg"
@@ -28,10 +26,9 @@ export const MenuIcon = ({ style, className = defaultClassName }) => (
   </svg>
 );
 
-export const CrossIcon = ({ className, style }) => (
+export const CrossIcon = ({ className }) => (
   <svg
     className={className ?? defaultClassName}
-    style={style}
     fill="currentColor"
     viewBox="0 0 9 9"
     xmlns="http://www.w3.org/2000/svg"
@@ -40,10 +37,9 @@ export const CrossIcon = ({ className, style }) => (
   </svg>
 );
 
-export const PhoneIcon = ({ className, style }) => (
+export const PhoneIcon = ({ className }) => (
   <svg
     className={className ?? defaultClassName}
-    style={style}
     fill="currentColor"
     viewBox="0 0 473.806 473.806"
     xmlns="http://www.w3.org/2000/svg"
@@ -52,10 +48,9 @@ export const PhoneIcon = ({ className, style }) => (
   </svg>
 );
 
-export const EnvolopIcon = ({ className, style }) => (
+export const EnvolopIcon = ({ className }) => (
   <svg
     className={className ?? defaultClassName}
-    style={style}
     fill="currentColor"
     viewBox="0 0 490 490"
   >
@@ -70,10 +65,9 @@ export const EnvolopIcon = ({ className, style }) => (
   </svg>
 );
 
-export const ShareIcon = ({ className, style }) => (
+export const ShareIcon = ({ className }) => (
   <svg
     className={className ?? defaultClassName}
-    style={style}
     fill="currentColor"
     viewBox="0 0 481.6 481.6"
     xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +78,6 @@ export const ShareIcon = ({ className, style }) => (
 export const InstagramIcon = ({ style, className = defaultClassName }) => (
   <svg
     className={className}
-    style={style}
     fill="currentColor"
     viewBox="0 0 20 20"
     xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +93,6 @@ export const InstagramIcon = ({ style, className = defaultClassName }) => (
 export const FacebookIcon = ({ style, className = defaultClassName }) => (
   <svg
     className={className}
-    style={style}
     fill="currentColor"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
@@ -131,7 +123,6 @@ export const FacebookIcon = ({ style, className = defaultClassName }) => (
 export const TwitterIcon = ({ style, className = defaultClassName }) => (
   <svg
     className={className}
-    style={style}
     viewBox="0 0 19 16"
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
@@ -147,7 +138,6 @@ export const TwitterIcon = ({ style, className = defaultClassName }) => (
 export const GoogleIcon = ({ style, className = defaultClassName }) => (
   <svg
     className={className}
-    style={style}
     viewBox="0 0 24 24"
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
@@ -161,12 +151,7 @@ export const GoogleIcon = ({ style, className = defaultClassName }) => (
 );
 
 export const PlayIcon = ({ style, className = defaultClassName }) => (
-  <svg
-    className={className}
-    style={style}
-    fill="currentColor"
-    viewBox="0 0 260 180"
-  >
+  <svg className={className} fill="currentColor" viewBox="0 0 260 180">
     <path
       d="M220,2H40C19.01,2,2,19.01,2,40v100c0,20.99,17.01,38,38,38h180c20.99,0,38-17.01,38-38V40C258,19.01,240.99,2,220,2z
 	 M102,130V50l68,40L102,130z"
