@@ -77,16 +77,16 @@ export default function About() {
         </div>
       </div>
       <div className="mt-80 h-48 w-full bg-gray-700 px-10 sm:px-32 md:px-40 lg:px-60">
-        <div className="h-96 w-full relative">
-          <img
+        <div className="h-96 w-full relative bottom-48">
+          <Image
             src="/thumbnail.jpeg"
             onClick={() => setVideoPopup(true)}
             alt="video"
-            className="h-full w-full relative bottom-48 cursor-pointer bg-white"
+            fill
           />
           <div
             onClick={() => setVideoPopup(true)}
-            className="text-white hover:text-gray-300 cursor-pointer absolute z-20 transform -translate-y-48 inset-0 bg-gray-700 bg-opacity-30 flex flex-col items-center justify-center gap-6"
+            className="text-white hover:text-gray-300 cursor-pointer absolute z-20 inset-0 bg-gray-700 bg-opacity-30 flex flex-col items-center justify-center gap-6"
           >
             <PlayIcon className="h-20" />
             <span className="font-semibold">WATCH OUR VIDEO</span>
