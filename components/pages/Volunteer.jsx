@@ -5,7 +5,7 @@ import { volunteerPageData } from "@/data/volunteerPageData";
 export default function Volunteer() {
   return (
     <div className="mb-20">
-      <div className="h-96 w-full relative overflow-hidden">
+      <div className="-mt-24 min-h-screen w-full relative overflow-hidden">
         <Image
           className="absolute inset-0 w-full h-full object-cover"
           src="/home-cover-1.jpg"
@@ -13,7 +13,7 @@ export default function Volunteer() {
           fill
         />
         <div className="px-5 mx-auto text-white absolute inset-0 bg-gray-900 z-20 bg-opacity-40 flex flex-col justify-center gap-5">
-          <div className="mt-20 flex-grow w-full max-w-6xl mx-auto flex flex-col justify-center">
+          <div className="mt-20 mx-auto max-w-7xl flex-grow w-full flex flex-col justify-center">
             <span className="text-3xl"> arike</span>
             <div className="mt-5 text-5xl md:text-7xl">
               <span className="font-semibold">Become </span>
@@ -24,7 +24,7 @@ export default function Volunteer() {
               <div className="rounded h-0.5 w-8 bg-gray-300" />
             </div>
           </div>
-          <div className="ml-auto transform translate-y-2 md:translate-y-5 text-teal-100 text-5xl sm:text-6xl md:text-9xl">
+          <div className="mx-auto max-w-7xl w-full flex flex-row justify-end transform translate-y-2 md:translate-y-5 text-teal-100 text-5xl sm:text-6xl md:text-9xl">
             Compassion
           </div>
         </div>
@@ -33,7 +33,7 @@ export default function Volunteer() {
         <div className="pt-20 flex flex-col md:grid md:grid-cols-2 gap-10 lg:gap-20 items-center sm:items-start justify-around">
           <Image
             className="object-cover object-center mx-auto"
-            src="/home-cover-2.jpg"
+            src="/volunteer.jpg"
             alt=""
             height="1000"
             width="500"
@@ -57,7 +57,7 @@ export default function Volunteer() {
         <div className="pt-32 flex flex-col md:grid md:grid-cols-2 gap-10 lg:gap-20 items-center sm:items-start justify-around">
           <Image
             className="object-cover object-center mx-auto"
-            src="/home-cover-2.jpg"
+            src="/volunteer.jpg"
             alt=""
             height="1000"
             width="500"

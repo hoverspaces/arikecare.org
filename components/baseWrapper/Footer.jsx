@@ -104,7 +104,7 @@ export default function Footer() {
               <h3 className="text-xl font-semibold">Donate</h3>
             </div>
             <span>Help us to dignify healthcare.</span>
-            <button className="mt-2 font-semibold px-28 py-4 rounded-full bg-teal-200 hover:bg-green-200 transform hover:-translate-y-1 duration-500 text-gray-700 text-xs">
+            <button className="mt-2 font-semibold px-10 sm:px-28 py-4 rounded-full bg-teal-200 hover:bg-green-200 transform hover:-translate-y-1 duration-500 text-gray-700 text-xs">
               DONATE
             </button>
           </div>

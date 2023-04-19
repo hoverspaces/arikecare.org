@@ -10,9 +10,9 @@ export default function About() {
 
   return (
     <div className="">
-      <div className="h-96 w-full relative overflow-hidden">
+      <div className="-mt-24 min-h-screen w-full relative overflow-hidden">
         <Image
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute w-full h-full object-cover"
           src="/ostosmy.jpg"
           alt=""
           fill
@@ -20,7 +20,7 @@ export default function About() {
         <div className="px-5 mx-auto text-white absolute inset-0 bg-gray-900 z-20 bg-opacity-40 flex flex-col justify-center gap-5">
           <div className="mt-20 flex-grow w-full max-w-6xl mx-auto flex flex-col justify-center">
             <span className="text-3xl"> arike</span>
-            <div className="flex flex-col mt-5 text-5xl md:text-7xl">
+            <div className="flex flex-col mt-5 text-3xl sm:text-5xl md:text-7xl">
               <span className="font-semibold">About </span>
               <span className="font-light">Organization</span>
             </div>
@@ -31,11 +31,11 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="max-w-6xl px-5 mx-auto flex flex-col">
-        <div className="pt-20 flex flex-col md:grid md:grid-cols-2 gap-10 lg:gap-20 items-center justify-around">
+      <div className="pt-20 max-w-6xl px-5 mx-auto flex flex-col">
+        <div className="flex flex-col md:grid md:grid-cols-2 gap-10 lg:gap-20 items-center justify-around">
           <Image
             className="object-cover object-center mx-auto"
-            src="/about-1.jpg"
+            src="/about.jpg"
             alt=""
             height="1000"
             width="500"
@@ -88,7 +88,7 @@ export default function About() {
             onClick={() => setVideoPopup(true)}
             className="text-white hover:text-gray-300 cursor-pointer absolute z-20 inset-0 bg-gray-700 bg-opacity-30 flex flex-col items-center justify-center gap-6"
           >
-            <PlayIcon className="h-20" />
+            <PlayIcon className="h-10 sm:h-16 md:h-20" />
             <span className="font-semibold">WATCH OUR VIDEO</span>
           </div>
         </div>

@@ -26,7 +26,7 @@ export default function Header() {
           setMenu(false);
         }}
       />
-      <header className="text-gray-600 bg-white body-font shadow-xl">
+      <header className="text-gray-600 bg-white body-font shadow-lg">
         <div className="mx-auto flex flex-row justify-between max-w-7xl">
           <Link href="/">
             <div className="ml-6 sm:ml-16 h-full flex flex-row gap-4 items-center title-font cursor-pointer font-medium text-gray-900">
