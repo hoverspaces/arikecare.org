@@ -7,7 +7,6 @@ const nextConfig = {
     unoptimized: true
   },
   experimental: {
-    runtime: 'edge',
     images: {
       unoptimized: true
     }
