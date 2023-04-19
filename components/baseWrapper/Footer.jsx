@@ -12,6 +12,17 @@ const navigation = [
   { label: "Contact", href: "/contact" },
 ];
 
+const HoverspacesLink = (className) => (
+  <a
+    href="https://hoverspaces.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className={className}
+  >
+    Hoverspaces
+  </a>
+);
+
 export default function Footer() {
   const router = useRouter();
 
@@ -109,8 +120,9 @@ export default function Footer() {
             </button>
           </div>
         </div>
-        <p className="mt-20 mb-16 w-full flex justify-center sm:justify-start text-sm text-gray-400">
-          © {new Date().getFullYear()} - Hexloop
+        <p className="mt-20 mb-16 w-full flex gap-1 justify-center sm:justify-start text-sm text-gray-400">
+          <span>© {new Date().getFullYear()} - Arike | Maintained by</span>
+          <HoverspacesLink />
         </p>
       </div>
     </footer>
