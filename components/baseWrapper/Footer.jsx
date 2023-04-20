@@ -5,13 +5,7 @@ import Image from "next/image";
 import { contact } from "@/data/contact";
 import { social } from "@/data/social";
 import Link from "next/link";
-
-const navigation = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
-  { label: "Activities", href: "/activities" },
-];
+import { links } from "./pages";
 
 const HoverspacesLink = (className) => (
   <a
@@ -94,21 +88,23 @@ export default function Footer() {
               <h3 className="text-xl font-semibold">Menu & Links</h3>
             </div>
             <div className="mt-4 flex flex-col gap-3">
-              {navigation.map((item) => (
-                <div key={item.label}>
-                  <Link
-                    href={item.href}
-                    className={
-                      "text-sm transform delay-100 " +
-                      (router.pathname === item.href
-                        ? "text-green-200"
-                        : "hover:text-green-200")
-                    }
-                  >
-                    {item.label}
-                  </Link>
-                </div>
-              ))}
+              {links
+                .filter((val) => val.label !== "Volunteer")
+                .map((item) => (
+                  <div key={item.label}>
+                    <Link
+                      href={item.link}
+                      className={
+                        "text-sm transform delay-100 " +
+                        (router.pathname === item.link
+                          ? "text-green-200"
+                          : "hover:text-green-200")
+                      }
+                    >
+                      {item.label}
+                    </Link>
+                  </div>
+                ))}
             </div>
           </div>
           <div className="flex flex-col gap-4">

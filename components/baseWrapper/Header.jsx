@@ -5,14 +5,7 @@ import Link from "next/link";
 
 import SidebarMenu from "./Menu";
 import { MenuIcon } from "../common/appIcons";
-
-const links = [
-  { label: "Home", link: "/" },
-  { label: "About", link: "/about" },
-  { label: "Volunteer", link: "/volunteer" },
-  { label: "Contact", link: "/contact" },
-  { label: "Activities", link: "/activities" },
-];
+import { links } from "./pages";
 
 export default function Header() {
   const [menu, setMenu] = useState(false);

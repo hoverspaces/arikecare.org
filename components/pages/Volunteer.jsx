@@ -16,8 +16,8 @@ export default function Volunteer() {
           <div className="mt-20 mx-auto max-w-7xl flex-grow w-full flex flex-col justify-center">
             <span className="text-3xl"> arike</span>
             <div className="mt-5 text-5xl md:text-7xl">
-              <span className="font-semibold">Become </span>
-              <span className="font-light">a Volunteer</span>
+              <span className="font-semibold">Koode </span>
+              <span className="font-light">Community</span>
             </div>
             <div className="mt-9 flex flex-row gap-2">
               <div className="rounded h-0.5 w-20 bg-teal-200" />

@@ -5,17 +5,12 @@ import { Transition } from "@headlessui/react";
 import { CrossIcon } from "../common/appIcons";
 import { contact } from "@/data/contact";
 import { social } from "@/data/social";
-
-const links = [
-  { label: "Home", link: "/" },
-  { label: "About", link: "/about" },
-  { label: "Volunteer", link: "/volunteer" },
-  { label: "Contact", link: "/contact" },
-  { label: "Activities", link: "/activities" },
-];
+import { links } from "./pages";
+import { useRouter } from "next/router";
 
 export default function SidebarMenu({ parentShow, parentSetShow, className }) {
   const [show, setShow] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     setTimeout(() => setShow(parentShow), 100);
@@ -67,7 +62,10 @@ export default function SidebarMenu({ parentShow, parentSetShow, className }) {
                           setTimeout(() => parentSetShow(false), 100)
                         }
                         className={
-                          "text-left uppercase text-sm cursor-pointer text-white hover:text-gray-300 transform delay-100 duration-100 w-full rounded my-1 py-2 px-3"
+                          "text-left uppercase text-sm cursor-pointer transform delay-100 duration-100 w-full rounded my-1 py-2 px-3 " +
+                          (router.pathname === item.link
+                            ? "text-gray-400"
+                            : "text-white hover:text-gray-300")
                         }
                       >
                         {item.label}
