@@ -76,8 +76,8 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="mt-80 h-48 w-full bg-gray-700 px-10 sm:px-32 md:px-40 lg:px-60">
-        <div className="h-96 w-full relative bottom-48">
+      <div className="mt-80 h-48 w-full bg-gray-700 px-10">
+        <div className="h-40 sm:h-96 w-full max-w-2xl mx-auto relative bottom-20 sm:bottom-48">
           <Image
             src="/thumbnail.jpeg"
             onClick={() => setVideoPopup(true)}
@@ -88,7 +88,7 @@ export default function About() {
             onClick={() => setVideoPopup(true)}
             className="text-white hover:text-gray-300 cursor-pointer absolute z-20 inset-0 bg-gray-700 bg-opacity-30 flex flex-col items-center justify-center gap-6"
           >
-            <PlayIcon className="h-10 sm:h-16 md:h-20" />
+            <PlayIcon className="h-10 sm:h-16" />
             <span className="font-semibold">WATCH OUR VIDEO</span>
           </div>
         </div>

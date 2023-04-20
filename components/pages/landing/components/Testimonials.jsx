@@ -6,7 +6,7 @@ var imageSliderAnimationIndex = 0;
 
 const reviews = heroPageData.content4.testimonials;
 
-export default function Testimonials({ className }) {
+export default function Testimonials() {
   const [imgDisplay, setImgDisplay] = useState({ transform: "translateX(0%)" });
 
   const imageSliderAnimation = reviews.map((val, index) => {
@@ -17,8 +17,10 @@ export default function Testimonials({ className }) {
     return (
       <div className="">
         <div className="flex flex-row items-start gap-2">
-          <DoubeQuoteIcon className="hidden sm:block text-stone-400 h-20 w-24" />
-          <span className="text-sm md:text-base">{review.testimony}</span>
+          {/* <DoubeQuoteIcon className="hidden sm:block text-stone-400 h-20 w-24" /> */}
+          <span className="text-sm md:text-base shrink">
+            {review.testimony}
+          </span>
         </div>
 
         <div className="mt-7 sm:flex sm:flex-row gap-2 sm:items-center font-semibold">
@@ -66,7 +68,7 @@ export default function Testimonials({ className }) {
       </div>
       <div
         className={
-          "flex flex-row w-full flex-nowrap mt-10 overflow-hidden " + className
+          "flex flex-row w-full flex-nowrap mt-10 overflow-hidden -mx-5"
         }
       >
         {reviews.map((review, index) => (
@@ -76,7 +78,7 @@ export default function Testimonials({ className }) {
               ...imgDisplay,
               minWidth: "100%",
             }}
-            className="transition duration-500 ease-in-out delay-100 w-full"
+            className="transition duration-500 ease-in-out delay-100"
           >
             {reviewBlock(review)}
           </div>

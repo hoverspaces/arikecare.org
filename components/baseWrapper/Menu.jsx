@@ -7,10 +7,11 @@ import { contact } from "@/data/contact";
 import { social } from "@/data/social";
 
 const links = [
-  { title: "Home", link: "/" },
-  { title: "About", link: "/about" },
-  { title: "Volunteer", link: "/volunteer" },
-  { title: "Contact", link: "/contact" },
+  { label: "Home", link: "/" },
+  { label: "About", link: "/about" },
+  { label: "Volunteer", link: "/volunteer" },
+  { label: "Contact", link: "/contact" },
+  { label: "Activities", link: "/activities" },
 ];
 
 export default function SidebarMenu({ parentShow, parentSetShow, className }) {
@@ -62,11 +63,14 @@ export default function SidebarMenu({ parentShow, parentSetShow, className }) {
                   return (
                     <Link href={item.link} key={index}>
                       <div
+                        onClick={() =>
+                          setTimeout(() => parentSetShow(false), 100)
+                        }
                         className={
                           "text-left uppercase text-sm cursor-pointer text-white hover:text-gray-300 transform delay-100 duration-100 w-full rounded my-1 py-2 px-3"
                         }
                       >
-                        {item.title}
+                        {item.label}
                       </div>
                     </Link>
                   );
@@ -110,12 +114,15 @@ export default function SidebarMenu({ parentShow, parentSetShow, className }) {
               ))}
             </div>
             <div className="w-80 sm:w-full mt-10 mb-12 px-8">
-              <button className="w-full py-9 relative text-indigo-900">
-                <div className="bg-teal-200 hover:scale-75 duration-300 absolute inset-0" />
-                <span className="relative z-10 pointer-events-none text-sm font-semibold">
-                  DONATE
-                </span>
-              </button>
+              <Link href="/donate">
+                <button className="w-full py-9 relative text-indigo-900">
+                  <div className="bg-teal-200 hover:scale-75 duration-300 absolute inset-0" />
+
+                  <span className="relative z-10 pointer-events-none text-sm font-semibold">
+                    DONATE
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>
         </div>

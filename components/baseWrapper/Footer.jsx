@@ -10,6 +10,7 @@ const navigation = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
+  { label: "Activities", href: "/activities" },
 ];
 
 const HoverspacesLink = (className) => (
@@ -115,9 +116,11 @@ export default function Footer() {
               <h3 className="text-xl font-semibold">Donate</h3>
             </div>
             <span>Help us to dignify healthcare.</span>
-            <button className="mt-2 font-semibold px-10 sm:px-28 py-4 rounded-full bg-teal-200 hover:bg-green-200 transform hover:-translate-y-1 duration-500 text-gray-700 text-xs">
-              DONATE
-            </button>
+            <Link href="/donate">
+              <button className="mt-2 font-semibold px-10 sm:px-28 py-4 rounded-full bg-teal-200 hover:bg-green-200 transform hover:-translate-y-1 duration-500 text-gray-700 text-xs">
+                DONATE
+              </button>
+            </Link>
           </div>
         </div>
         <p className="mt-20 mb-16 w-full flex gap-1 justify-center sm:justify-start text-sm text-gray-400">
