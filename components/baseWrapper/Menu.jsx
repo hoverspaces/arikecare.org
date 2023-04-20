@@ -23,7 +23,7 @@ export default function SidebarMenu({ parentShow, parentSetShow, className }) {
         setTimeout(() => parentSetShow(), 400);
       }}
       className={
-        "fixed inset-0 bg-gray-800 bg-opacity-50 text-gray-700 z-20 " +
+        "fixed lg:hidden inset-0 bg-gray-800 bg-opacity-50 text-gray-700 z-20 " +
         (parentShow ? "" : "hidden ") +
         className
       }

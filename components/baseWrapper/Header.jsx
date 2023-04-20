@@ -22,10 +22,10 @@ export default function Header() {
       />
       <header className="text-gray-600 bg-white body-font shadow-lg">
         <div className="mx-auto flex flex-row justify-between max-w-7xl">
-          <div className="ml-6 sm:ml-16 h-full flex flex-row gap-4 items-center label-font cursor-pointer font-medium text-gray-900">
+          <div className="ml-6 h-full flex flex-row gap-4 items-center label-font cursor-pointer font-medium text-gray-900">
             <button
               onClick={() => setMenu(true)}
-              className="sm:flex hidden text-gray-700 hover:text-gray-500"
+              className="hidden sm:flex lg:hidden text-gray-700 hover:text-gray-500"
             >
               <MenuIcon className="h-4" />
             </button>
