@@ -14,7 +14,7 @@ import { social } from "@/data/social";
 export default function Contact() {
   return (
     <div className="mb-20">
-      <div className="-mt-24 min-h-screen w-full relative overflow-hidden">
+      <div className="h-96 w-full relative overflow-hidden">
         <Image
           className="absolute inset-0 w-full object-cover"
           src="/contacts.jpg"

@@ -16,28 +16,24 @@ export const activities = [
     images: [
       {
         image: "/activities/distribution-of-neomotion-wheel-chairs/1.png",
-        className: "h-40 sm:h-full",
       },
       {
         image: "/activities/distribution-of-neomotion-wheel-chairs/2.png",
-        className: "h-40 sm:h-full",
       },
       {
         image: "/activities/distribution-of-neomotion-wheel-chairs/3.png",
-        className: "h-96 sm:h-full row-span-2",
+        className: "row-span-2",
       },
 
       {
         image: "/activities/distribution-of-neomotion-wheel-chairs/4.png",
-        className: "h-40 sm:h-full",
       },
       {
         image: "/activities/distribution-of-neomotion-wheel-chairs/5.png",
-        className: "h-40 sm:h-full",
       },
       {
         image: "/activities/distribution-of-neomotion-wheel-chairs/6.png",
-        className: "h-96 sm:h-full row-span-2",
+        className: "row-span-2",
       },
     ],
   },
