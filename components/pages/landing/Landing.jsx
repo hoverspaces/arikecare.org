@@ -65,8 +65,10 @@ export default function Landing() {
           </div>
           <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-16">
             {heroPageData.content1.features.map((feature, featureIndex) => (
-              <div key={featureIndex} className="flex flex-col">
-                <feature.icon className="text-teal-200 h-24 w-24" />
+              <div key={featureIndex} className="flex flex-col items-start">
+                <div className="h-20 w-20">
+                  <feature.icon className="text-teal-200 h-full w-full" />
+                </div>
                 <span className="mt-5 font-semibold text-xl text-white">
                   {feature.label}
                 </span>

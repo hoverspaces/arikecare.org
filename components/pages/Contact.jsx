@@ -32,9 +32,11 @@ export default function Contact() {
       </div>
       <div className="px-5 mt-20 mx-auto max-w-6xl">
         <div className="text-gray-700 font-semibold grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-4">
-          <div className="flex flex-col items-center">
-            <LocationIcon className="mb-6 h-16 w-12" />
-            <span className="-mt-3 max-w-xs mx-auto text-center">
+          <div className="flex flex-col items-center gap-5">
+            <div className="h-12 w-12">
+              <LocationIcon className="h-full w-full" />
+            </div>
+            <span className="max-w-xs mx-auto text-center">
               Adress: Arike, 65/2265, BRRA 65, Bank Rd, Kaloor, Ernakulam,
               Kerala 682017
             </span>
