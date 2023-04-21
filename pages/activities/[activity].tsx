@@ -1,10 +1,16 @@
 import React from "react";
+import Head from "next/head";
+
 import Activity from "@/components/pages/Activity";
 import { activities } from "@/data/activities";
 
-export default function Location(data: object) {
+export default function ActivityPage(data: any) {
   return (
     <main>
+      <Head>
+        <title>arike - {data.label}</title>
+        <link rel="icon" href="/logo favicon.ico" />
+      </Head>
       <Activity data={data} />
     </main>
   );
