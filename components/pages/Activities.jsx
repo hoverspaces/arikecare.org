@@ -43,7 +43,7 @@ export default function Contact() {
                   <div key={sponsorIndex} className="px-6 py-1">
                     <Image
                       src={sponsor.image}
-                      alt={sponsor.name}
+                      alt={sponsor.image}
                       height={50}
                       width={sponsor.width}
                     />
@@ -53,7 +53,10 @@ export default function Contact() {
 
               <Link href={"/activities/" + activity.link}>
                 <button className="mt-5 text-sm px-3 py-1.5 rounded-full border border-gray-600 hover:border-gray-400 flex flex-row text-gray-700 hover:text-gray-500 duration-300 gap-1 items-center">
-                  Know more <Arrow className="h-2.5" />
+                  Know more{" "}
+                  <div className="h-3 w-3">
+                    <Arrow className="h-full w-full" />
+                  </div>
                 </button>
               </Link>
             </div>

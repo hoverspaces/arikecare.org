@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 
@@ -6,6 +6,7 @@ import { contact } from "@/data/contact";
 import { social } from "@/data/social";
 import Link from "next/link";
 import { links } from "./pages";
+import { Transition } from "@headlessui/react";
 
 const HoverspacesLink = (className) => (
   <a
@@ -19,7 +20,22 @@ const HoverspacesLink = (className) => (
 );
 
 export default function Footer() {
+  const [openMenu, setOpenMenu] = useState();
   const router = useRouter();
+  const ref = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setOpenMenu();
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref]);
 
   return (
     <footer className="text-gray-100 bg-gray-700">
@@ -88,9 +104,8 @@ export default function Footer() {
               <h3 className="text-xl font-semibold">Menu & Links</h3>
             </div>
             <div className="mt-4 flex flex-col gap-3">
-              {links
-                .filter((val) => val.label !== "Volunteer")
-                .map((item) => (
+              {links.map((item, index) => {
+                return item.link ? (
                   <div key={item.label}>
                     <Link
                       href={item.link}
@@ -104,7 +119,65 @@ export default function Footer() {
                       {item.label}
                     </Link>
                   </div>
-                ))}
+                ) : (
+                  <div
+                    key={index}
+                    ref={ref}
+                    className="relative h-full flex flex-col gap-3"
+                  >
+                    <div
+                      className={
+                        "h-full flex flex-col mr-5 transform duration-100 whitespace-pre cursor-pointer"
+                      }
+                      onClick={() =>
+                        setOpenMenu((openMenu) =>
+                          openMenu === item.label ? null : item.label
+                        )
+                      }
+                    >
+                      <span
+                        className={
+                          "text-sm transform delay-100 " +
+                          (router.pathname === item.link
+                            ? "text-green-200"
+                            : "hover:text-green-200")
+                        }
+                      >
+                        {item.label}
+                      </span>
+                    </div>
+                    <Transition
+                      show={openMenu === item.label}
+                      className=""
+                      enter="transition ease-out duration-100"
+                      enterFrom="transform opacity-0 scale-75"
+                      enterTo="transform opacity-100 scale-100"
+                      leave="transition ease-in duration-75"
+                      leaveFrom="transform opacity-100 scale-100"
+                      leaveTo="transform opacity-0 scale-75"
+                    >
+                      <div className="flex flex-col gap-3 border-l border-gray-400">
+                        {item.pages.map((page, index) => {
+                          return (
+                            <Link key={index} href={page.link}>
+                              <div
+                                className={
+                                  "ml-2 text-sm transform delay-100 " +
+                                  (router.pathname === item.link
+                                    ? "text-green-200"
+                                    : "hover:text-green-200")
+                                }
+                              >
+                                {page.label}
+                              </div>
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </Transition>
+                  </div>
+                );
+              })}
             </div>
           </div>
           <div className="flex flex-col gap-4">

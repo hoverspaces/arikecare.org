@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Transition } from "@headlessui/react";
 
@@ -10,7 +10,22 @@ import { useRouter } from "next/router";
 
 export default function SidebarMenu({ parentShow, parentSetShow, className }) {
   const [show, setShow] = useState(false);
+  const [openMenu, setOpenMenu] = useState();
   const router = useRouter();
+  const ref = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setOpenMenu();
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref]);
 
   useEffect(() => {
     setTimeout(() => setShow(parentShow), 100);
@@ -55,7 +70,7 @@ export default function SidebarMenu({ parentShow, parentSetShow, className }) {
               </button>
               <div className="flex flex-col mt-10 mb-20">
                 {links.map((item, index) => {
-                  return (
+                  return item.link ? (
                     <Link href={item.link} key={index}>
                       <div
                         onClick={() =>
@@ -71,6 +86,66 @@ export default function SidebarMenu({ parentShow, parentSetShow, className }) {
                         {item.label}
                       </div>
                     </Link>
+                  ) : (
+                    <div
+                      key={index}
+                      ref={ref}
+                      className="relative h-full flex flex-col gap-3"
+                    >
+                      <div
+                        className={
+                          "h-full flex flex-col mr-5 transform duration-100 whitespace-pre cursor-pointer"
+                        }
+                        onClick={() =>
+                          setOpenMenu((openMenu) =>
+                            openMenu === item.label ? null : item.label
+                          )
+                        }
+                      >
+                        <span
+                          className={
+                            "text-left uppercase text-sm cursor-pointer transform delay-100 duration-100 w-full rounded my-1 py-2 px-3 " +
+                            (router.pathname === item.link
+                              ? "text-gray-400"
+                              : "text-white hover:text-gray-300")
+                          }
+                        >
+                          {item.label}
+                        </span>
+                      </div>
+                      <Transition
+                        show={openMenu === item.label}
+                        className=""
+                        enter="transition ease-out duration-100"
+                        enterFrom="transform opacity-0 scale-75"
+                        enterTo="transform opacity-100 scale-100"
+                        leave="transition ease-in duration-75"
+                        leaveFrom="transform opacity-100 scale-100"
+                        leaveTo="transform opacity-0 scale-75"
+                      >
+                        <div className="-mt-2 ml-3 flex flex-col gap-3 border-l border-gray-400">
+                          {item.pages.map((page, index) => {
+                            return (
+                              <Link key={index} href={page.link}>
+                                <div
+                                  onClick={() =>
+                                    setTimeout(() => parentSetShow(false), 100)
+                                  }
+                                  className={
+                                    "text-left uppercase text-sm cursor-pointer transform delay-100 duration-100 w-full px-3 " +
+                                    (router.pathname === item.link
+                                      ? "text-gray-400"
+                                      : "text-white hover:text-gray-300")
+                                  }
+                                >
+                                  {page.label}
+                                </div>
+                              </Link>
+                            );
+                          })}
+                        </div>
+                      </Transition>
+                    </div>
                   );
                 })}
               </div>

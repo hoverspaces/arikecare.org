@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import Volunteer from "@/components/pages/Volunteer";
+import Koode from "@/components/pages/Koode";
 
 export default function KoodePage() {
   return (
@@ -9,7 +9,7 @@ export default function KoodePage() {
         <title>arike - Koode</title>
         <link rel="icon" href="/logo favicon.ico" />
       </Head>
-      <Volunteer />
+      <Koode />
     </main>
   );
 }

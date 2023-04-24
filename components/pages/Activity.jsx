@@ -15,7 +15,7 @@ export default function Activity({ data }) {
           <div key={sponsorIndex} className="px-6 py-1">
             <Image
               src={sponsor.image}
-              alt={sponsor.name}
+              alt={sponsor.image}
               height={50}
               width={sponsor.width}
             />

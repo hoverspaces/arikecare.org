@@ -90,36 +90,33 @@ export default function Landing() {
             }}
           />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          <div className="sm:col-span-2 flex flex-col p-8">
-            <span className="mb-3 font-semibold text-gray-400">
-              {heroPageData.content3.heading1}
-            </span>
-            {heroPageData.content3.heading2}
-            <span className="text-gray-500 mt-5">
-              {heroPageData.content3.body}
-            </span>
-          </div>
-          {heroPageData.content3.services.map((service, serviceIndex) => (
-            <div
-              key={serviceIndex}
-              className="w-full h-96 relative overflow-hidden"
-            >
-              <img
-                src={service.image}
-                className="w-full h-full object-cover transform hover:scale-125 ease-in-out duration-500"
-              />
-              <div className="pointer-events-none absolute inset-0 bg-opacity-50 bg-black flex flex-col items-center justify-center gap-6">
-                <div className="h-3 w-7 rounded-full bg-teal-200" />
-                <span className="text-white font-bold text-3xl sm:text-4xl text-center max-w-sm">
-                  {service.label}
-                </span>
+
+        <div className="mt-16 sm:mt-28 flex flex-col gap-16 items-center">
+          <span className="font-bold text-3xl">
+            {heroPageData.content3.label}
+          </span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            {heroPageData.content3.services.map((service, serviceIndex) => (
+              <div
+                key={serviceIndex}
+                className="w-full h-96 relative overflow-hidden"
+              >
+                <img
+                  src={service.image}
+                  className="w-full h-full object-cover transform hover:scale-125 ease-in-out duration-500"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-opacity-20 bg-black flex flex-col items-center justify-center gap-6">
+                  <div className="h-3 w-7 rounded-full bg-teal-200" />
+                  <span className="text-white font-bold text-3xl sm:text-4xl text-center max-w-sm">
+                    {service.label}
+                  </span>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-      <div className="py-10 bg-teal-200 flex flex-col items-center">
+      <div className="mt-10 sm:mt-20 py-10 bg-teal-200 flex flex-col items-center">
         <div className="max-w-6xl mx-auto px-5 py-10">
           <span className="text-stone-500 font-semibold">
             {heroPageData.content4.heading1}

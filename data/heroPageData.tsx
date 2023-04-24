@@ -67,37 +67,43 @@ export const heroPageData = {
     value: 1000,
   },
   content3: {
-    heading1: "What we Did",
-    heading2: (
-      <div className="text-4xl sm:text-5xl font-bold">
-        Who can avail <span className="font-light">our services?</span>
-      </div>
-    ),
-    body: "Arike is an NGO that offers pain and palliative care to people in our community that is struggling with debilitating and chronic illnesses such as Cancer, Kidney Disease, etc. Our goal is to help these people to relieve their suffering and enhance the quality of their lives. We offer a helping hand to the patient and their bystanders to get through their life with ease providing support at desperate times. In the instances where there is no best solution or cure, Arike offers people endless care and comfort accompanying them throughout the entire aspects of their journey.",
+    label: "All our services are available 24/7",
     services: [
       {
-        label: "Neurological conditions",
-        image: "/services/neuro.jpg",
+        label: "Doctor Consultations",
+        image: "/services/Doctor Consultations.png",
       },
       {
-        label: "Differently abled persons",
-        image: "/services/differently-abled.jpg",
+        label: "End-of-life care",
+        image: "/services/End-of-life care.png",
       },
       {
-        label: "Respiratory conditions (COPD, asthma)",
-        image: "/services/respiratory.jpg",
+        label: "Medical Equipments & Surgicals",
+        image: "/services/Medical Equipments & Surgicals.png",
       },
       {
-        label: "Other chronic conditions with complications",
-        image: "/services/chronic.jpg",
+        label: "Home-care System",
+        image: "/services/Home-care System.png",
       },
       {
-        label: "Post surgery recovery/Post transplant",
-        image: "/services/post-surgery.jpg",
+        label: "Regular nursing care",
+        image: "/services/Regular nursing care.png",
       },
       {
-        label: "Ostomy patients (colostomy, tracheostomy)",
-        image: "/services/ostosmy.jpg",
+        label: "Emergency Care",
+        image: "/services/Emergency Care.png",
+      },
+      {
+        label: "Referral System",
+        image: "/services/Referral System.png",
+      },
+      {
+        label: "Death care",
+        image: "/services/Death care.png",
+      },
+      {
+        label: "Ascitic tap",
+        image: "/services/Ascitic tap.png",
       },
     ],
   },
@@ -110,19 +116,39 @@ export const heroPageData = {
     ),
     testimonials: [
       {
-        testimony: `ARIKE has given excellent care for my mother. My mother suffered from diabetes and its complications. She was not eating or drinking anything properly and was very weak.. Arike gave both nursing care and doctor's consultation. Nurses came to this conclusion after the treating doctors advised that palliative care should be sought out because there wasn’t much that could be done for her. They explained about keeping her comfortable as long as possible and not to burden her with further medicines. Intravenous fluids were given to her as and when required andNursing staff were punctual and took very good care of everything. We are fully satisfied with all the care given by ARIKE staff.`,
-        authorName: "Mrs. Gracy Mathai",
-        designation: "Patient",
+        testimony: `We are impressed with the care and attention given by the medical staff at Arike to
+        the families of their patients, in addition to patient care. There are no words to express
+        it. Doctors are available to check my father at any moment. The doctors were there to
+        offer me strength after my father passed away when I was completely worn out. I've
+        been able to provide the finest care for my father in his final days thanks to Arike's
+        assistance. Arike crew has my sincere affection and gratitude.`,
+        authorName: "Mrs. Sheeba",
+        designation: "Caregiver of Mr Pavunny I M",
       },
       {
-        testimony: `We have full satisfaction with the medical staff at Arike who offers care and attention to the families of their patients in addition to patient care. There are no words to express it. Doctors were available to check on my father at any moment. The doctors were there to offer me strength after my father passed away when I was completely worn out. I've been able to provide the finest care for my father in his final days thanks to Arike's assistance. The Arike crew has my sincere affection and gratitude.`,
-        authorName: "Mr. Pavunny I M",
-        designation: "Patient",
+        testimony: `To us, Team Arike is like a family. My father will be lively when the Arike staff
+        members arrive for the care,(especially Elizabeth Sister & Nithin). It’s as if his
+        batteries get charged and he is full of life. When we see it, we also feel a lot of
+        comfort and joy. As a result, we can certainly say that the Arike team serves as more
+        of a  family to us than just the patient's caretakers.`,
+        authorName: "Supriya",
+        designation: "caregiver of Mr.Prabhakaran Pilla",
       },
       {
-        testimony: `To us, Team Arike resembles a family.Team Arike seems like a family to us. My father will be lively when the Arike staff members arrive for the care,(Especially ,Elizabeth Sister & Nithin). as if the battery has just been charged. The interaction with them gave him a pleasant feeling. When we see it, we also feel a lot of comfort and joy. As a result, we can already say that the Arike team serves as more of a  family to us than just the patient's caretakers.`,
-        authorName: "Mr. Prabhakaran Pillai",
-        designation: "Patient",
+        testimony: `You gave excellent care. My mother suffered from uncontrolled diabetes. Arike
+        Nurses came to the conclusion after the treating doctors advised that palliative care
+        should be sought out because there wasn’t much that could be done with medicines
+        alone. Arike Nursing staff are very punctual and took care of everything. We are
+        satisfied with the Nursing attention that you provided.`,
+        authorName: "Mr. Suni",
+        designation: "Caregiver of Mrs Gracy Mathai",
+      },
+      {
+        testimony: `Arike's team delivered an excellent service. Both the service and staff 's cooperation
+        were first-rate. We were so relieved to see the support extended to our family and they
+        gave  ample relief to all his symptoms. Thank you Arike for the wonderful care.`,
+        authorName: "Mrs.Smitha",
+        designation: "Caregiver of Mr.Rajagopalan k",
       },
     ],
   },

@@ -1,9 +1,13 @@
 import Image from "next/image";
+import { Transition } from "@headlessui/react";
+import Link from "next/link";
+import { useState } from "react";
 
 import { donatePageData } from "@/data/donatePageData";
-import Link from "next/link";
 
 export default function Donate() {
+  const [showUPI, setShowUPI] = useState(false);
+
   return (
     <div className="w-full min-h-full sm:py-10 bg-gray-200 flex items-center justify-center">
       <div className="max-w-3xl shadow px-20 py-10 flex flex-col items-center bg-white">
@@ -20,7 +24,10 @@ export default function Donate() {
               alt=""
               fill
             />
-            <button className="absolute z-10 bg-white hover:bg-gray-100 rounded-full px-6 py-1 border border-gray-500 hover:border-gray-600">
+            <button
+              onClick={() => setShowUPI(true)}
+              className="absolute z-10 bg-white hover:bg-gray-100 rounded-full px-6 py-1 border border-gray-500 hover:border-gray-600"
+            >
               Show QR
             </button>
           </div>
@@ -42,6 +49,22 @@ export default function Donate() {
           ))}
         </div>
       </div>
+      <Transition
+        show={showUPI}
+        as="div"
+        className="fixed inset-0 bg-black bg-opacity-50 z-10"
+        onClick={() => setShowUPI(false)}
+      >
+        <div className="mt-20 absolute inset-0 flex items-center justify-center">
+          <Image
+            onClick={(e) => e.stopPropagation()}
+            src="/UPI.png"
+            alt="UPI"
+            width={400}
+            height={400}
+          />
+        </div>
+      </Transition>
     </div>
   );
 }

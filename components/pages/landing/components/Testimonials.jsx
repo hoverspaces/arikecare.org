@@ -26,7 +26,7 @@ export default function Testimonials() {
         <div className="mt-7 sm:flex sm:flex-row gap-2 sm:items-center font-semibold">
           <div className="hidden sm:block h-0.5 rounded-full w-10 bg-stone-300" />
           <span className="sm:ml-3 capitalize">{review.authorName}, </span>
-          <span className="text-gray-600">{review.designation}</span>
+          <span className="text-sm text-gray-600">{review.designation}</span>
         </div>
       </div>
     );
