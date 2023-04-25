@@ -17,7 +17,7 @@ export default function Hero() {
       {[
         { show: content === 1, img: "/home-cover-1.jpg" },
         { show: content === 2, img: "/home-cover-2.jpg" },
-        { show: content === 3, img: "/home-cover-3.jpg" },
+        { show: content === 3, img: "/activities.png" },
       ].map((ele, index) => (
         <Transition
           key={index}
@@ -38,7 +38,7 @@ export default function Hero() {
         </Transition>
       ))}
 
-      <div className="pt-24 mx-auto text-white relative inset-0 bg-black z-20 bg-opacity-60 flex flex-col justify-center gap-5">
+      <div className="pt-24 mx-auto text-white relative inset-0 bg-black z-20 bg-opacity-30 flex flex-col justify-center gap-5">
         <div className="px-5 h-screen mx-auto max-w-7xl flex-grow w-full flex flex-col justify-center">
           <div className="w-full flex flex-col sm:flex-row gap-x-10 gap-y-24">
             <div className="flex-grow">
@@ -66,9 +66,11 @@ export default function Hero() {
                   leaveTo="translate-y-5 opacity-0"
                   className=""
                 >
-                  Access to quality home-based care for patients with life
-                  limiting illness and to those whose illness can be managed at
-                  home, thereby reducing unnecessary hospital visits.
+                  Everyone has the fundamental right to receive good quality
+                  health care within the comfort of one's own home amidst loved
+                  ones in addition to securing their privacy, familiarity with
+                  their environment, autonomy, and a greater degree of
+                  independence. This is the promise made by ARIKE.
                 </Transition.Child>
                 <Transition.Child
                   enter="transition ease-in-out duration-300 transform delay-500"
@@ -96,7 +98,7 @@ export default function Hero() {
                   leaveTo="translate-y-5 opacity-0"
                   className="text-4xl md:text-7xl font-bold"
                 >
-                  Our Helping
+                  24 HOURS
                 </Transition.Child>
                 <Transition.Child
                   enter="transition ease-in-out duration-300 transform delay-500"
@@ -107,25 +109,14 @@ export default function Hero() {
                   leaveTo="translate-y-5 opacity-0"
                   className="text-4xl md:text-7xl -mt-5"
                 >
-                  around the world.
+                  EMERGENCY CARE
                 </Transition.Child>
+
                 <Transition.Child
                   enter="transition ease-in-out duration-300 transform delay-700"
                   enterFrom="translate-y-5 opacity-0"
                   enterTo="translate-y-0 opacity-100"
                   leave="transition ease-in-out duration-300 transform delay-75"
-                  leaveFrom="translate-y-0 opacity-100"
-                  leaveTo="translate-y-5 opacity-0"
-                  className=""
-                >
-                  Promoting equitable access to health care by all strata of
-                  society.
-                </Transition.Child>
-                <Transition.Child
-                  enter="transition ease-in-out duration-300 transform delay-1000"
-                  enterFrom="translate-y-5 opacity-0"
-                  enterTo="translate-y-0 opacity-100"
-                  leave="transition ease-in-out duration-300 transform"
                   leaveFrom="translate-y-0 opacity-100"
                   leaveTo="translate-y-5 opacity-0"
                   className="text-white hover:text-gray-600 bg-opacity-0 hover:bg-opacity-100 bg-teal-200 border-2 border-teal-200 rounded-full px-16 py-4 font-semibold text-sm transform duration-300 hover:-translate-y-1"
@@ -136,7 +127,7 @@ export default function Hero() {
               </Transition>
               <Transition
                 show={content === 3}
-                className="mx-auto flex flex-col items-center text-center gap-8 max-w-3xl"
+                className="flex flex-col items-start gap-8 max-w-3xl"
               >
                 <Transition.Child
                   enter="transition ease-in-out duration-300 transform delay-300"
@@ -145,9 +136,9 @@ export default function Hero() {
                   leave="transition ease-in-out duration-300 transform delay-150"
                   leaveFrom="translate-y-0 opacity-100"
                   leaveTo="translate-y-5 opacity-0"
-                  className="text-4xl md:text-7xl font-bold"
+                  className="text-4xl md:text-5xl"
                 >
-                  arike Volounteers
+                  CURRENT ACTIVITY
                 </Transition.Child>
                 <Transition.Child
                   enter="transition ease-in-out duration-300 transform delay-500"
@@ -156,9 +147,9 @@ export default function Hero() {
                   leave="transition ease-in-out duration-300 transform delay-100"
                   leaveFrom="translate-y-0 opacity-100"
                   leaveTo="translate-y-5 opacity-0"
-                  className="text-4xl md:text-7xl -mt-5"
+                  className="text-4xl md:text-7xl -mt-5 font-semibold"
                 >
-                  Around the world.
+                  NEOMOTION
                 </Transition.Child>
                 <Transition.Child
                   enter="transition ease-in-out duration-300 transform delay-700"
@@ -169,9 +160,9 @@ export default function Hero() {
                   leaveTo="translate-y-5 opacity-0"
                   className=""
                 >
-                  Community empowerment by enlisting the public to volunteer
-                  their skills or time and lend a hand for any need that arises
-                  while running Arike.
+                  As part of our community outreach program, we facilitated the
+                  delivery of NEOMOTION wheelchairs to 80 differently abled
+                  people, thereby giving them independence.
                 </Transition.Child>
                 <Transition.Child
                   enter="transition ease-in-out duration-300 transform delay-1000"
@@ -180,10 +171,13 @@ export default function Hero() {
                   leave="transition ease-in-out duration-300 transform"
                   leaveFrom="translate-y-0 opacity-100"
                   leaveTo="translate-y-5 opacity-0"
-                  className="text-white hover:text-gray-600 bg-opacity-0 hover:bg-opacity-100 bg-teal-200 border-2 border-teal-200 rounded-full px-16 py-4 font-semibold text-sm transform duration-300 hover:-translate-y-1"
-                  as="button"
                 >
-                  Discover
+                  <Link
+                    className="text-white hover:text-gray-600 bg-opacity-0 hover:bg-opacity-100 bg-teal-200 border-2 border-teal-200 rounded-full px-16 py-4 font-semibold text-sm transform duration-300 hover:-translate-y-1"
+                    href="/activities/distribution-of-neomotion-wheel-chairs"
+                  >
+                    Discover
+                  </Link>
                 </Transition.Child>
               </Transition>
             </div>
