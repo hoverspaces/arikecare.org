@@ -91,7 +91,7 @@ export default function Landing() {
           />
         </div>
 
-        <div className="mt-16 sm:mt-28 flex flex-col gap-16 items-center">
+        <div className="flex flex-col gap-16 items-center">
           <span className="font-bold text-3xl">
             {heroPageData.content3.label}
           </span>

@@ -67,9 +67,9 @@ export default function Hero() {
                   className=""
                 >
                   Everyone has the fundamental right to receive good quality
-                  health care within the comfort of one's own home amidst loved
-                  ones in addition to securing their privacy, familiarity with
-                  their environment, autonomy, and a greater degree of
+                  health care within the comfort of one&apos;s own home amidst
+                  loved ones in addition to securing their privacy, familiarity
+                  with their environment, autonomy, and a greater degree of
                   independence. This is the promise made by ARIKE.
                 </Transition.Child>
                 <Transition.Child
