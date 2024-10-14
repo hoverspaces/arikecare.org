@@ -25,7 +25,7 @@ export default function Donate() {
   }, []);
   return (
     <div className="w-full min-h-full sm:py-10 bg-gray-200 flex items-center justify-center">
-      <div className="max-w-3xl shadow px-20 py-10 flex flex-col items-center bg-white">
+      <div className="shadow px-20 py-10 flex flex-col items-center bg-white">
         <span className="font-semibold text-xl">Donate for Arike</span>
         <span className="mt-3 px-4 py-2 rounded-full bg-teal-200">
           {donatePageData.supporters} supporters
@@ -42,6 +42,7 @@ export default function Donate() {
             oQRCode="YES"
           >
             <center>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 alt="please wait..."
                 src="https://danamojo.org/dm/css/images/loading.gif"
