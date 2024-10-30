@@ -22,10 +22,17 @@ export default function Donate() {
           "<center> <p style='color:#a94442;'>we are sorry that our systems are down. we will be up shortly. apologies for the inconvenience.</p></center>";
       }
     }, 20000);
+
+    setTimeout(function () {
+      $(".text-gray-700, .ml-auto").click(function () {
+        $(".quicksand .fixed").removeClass("hidden");
+        $(".quicksand .fixed").toggle();
+      });
+    }, 3000);
   }, []);
   return (
     <div className="w-full min-h-full sm:py-10 bg-gray-200 flex items-center justify-center">
-      <div className="w-full shadow px-20 py-10 flex flex-col items-center bg-white">
+      <div className="w-full shadow py-10 flex flex-col items-center bg-white">
         <span className="font-semibold text-xl">Donate for Arike</span>
         <span className="mt-3 px-4 py-2 rounded-full bg-teal-200">
           {donatePageData.supporters} supporters
