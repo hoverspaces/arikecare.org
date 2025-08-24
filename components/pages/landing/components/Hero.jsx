@@ -72,18 +72,7 @@ export default function Hero() {
                   with their environment, autonomy, and a greater degree of
                   independence. This is the promise made by ARIKE.
                 </Transition.Child>
-                <Transition.Child
-                  enter="transition ease-in-out duration-300 transform delay-500"
-                  enterFrom="translate-y-5 opacity-0"
-                  enterTo="translate-y-0 opacity-100"
-                  leave="transition ease-in-out duration-100 transform"
-                  leaveFrom="translate-y-0 opacity-100"
-                  leaveTo="translate-y-5 opacity-0"
-                  className="text-white hover:text-gray-600 bg-opacity-0 hover:bg-opacity-100 bg-teal-200 border-2 border-teal-200 rounded-full px-16 py-4 font-semibold text-sm transform duration-300 hover:-translate-y-1"
-                  as="button"
-                >
-                  Discover
-                </Transition.Child>
+               
               </Transition>
               <Transition
                 show={content === 2}
@@ -112,18 +101,7 @@ export default function Hero() {
                   EMERGENCY CARE
                 </Transition.Child>
 
-                <Transition.Child
-                  enter="transition ease-in-out duration-300 transform delay-700"
-                  enterFrom="translate-y-5 opacity-0"
-                  enterTo="translate-y-0 opacity-100"
-                  leave="transition ease-in-out duration-300 transform delay-75"
-                  leaveFrom="translate-y-0 opacity-100"
-                  leaveTo="translate-y-5 opacity-0"
-                  className="text-white hover:text-gray-600 bg-opacity-0 hover:bg-opacity-100 bg-teal-200 border-2 border-teal-200 rounded-full px-16 py-4 font-semibold text-sm transform duration-300 hover:-translate-y-1"
-                  as="button"
-                >
-                  Discover
-                </Transition.Child>
+               
               </Transition>
               <Transition
                 show={content === 3}
@@ -164,19 +142,7 @@ export default function Hero() {
                   delivery of NEOMOTION wheelchairs to 80 differently abled
                   people, thereby giving them independence.
                 </Transition.Child>
-                <Transition.Child
-                  enter="transition ease-in-out duration-300 transform delay-1000"
-                  enterFrom="translate-y-5 opacity-0"
-                  enterTo="translate-y-0 opacity-100"
-                  leave="transition ease-in-out duration-300 transform"
-                  leaveFrom="translate-y-0 opacity-100"
-                  leaveTo="translate-y-5 opacity-0"
-                >
-                  <Link
-                    className="text-white hover:text-gray-600 bg-opacity-0 hover:bg-opacity-100 bg-teal-200 border-2 border-teal-200 rounded-full px-16 py-4 font-semibold text-sm transform duration-300 hover:-translate-y-1"
-                    href="/activities/distribution-of-neomotion-wheel-chairs"
-                  >
-                    Discover
+                
                   </Link>
                 </Transition.Child>
               </Transition>
