@@ -37,8 +37,7 @@ export default function Contact() {
               <LocationIcon className="h-full w-full" />
             </div>
             <span className="max-w-xs mx-auto text-center">
-              Adress: Arike, 65/2265, BRRA 65, Bank Rd, Kaloor, Ernakulam,
-              Kerala 682017
+              Adress: Arike, 43, 707, P K Nair Rd, Palarivattom, Ernakulam, Kerala 682025
             </span>
           </div>
           <div className="flex flex-col gap-5 items-center">
