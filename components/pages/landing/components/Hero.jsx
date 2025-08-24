@@ -200,21 +200,7 @@ export default function Hero() {
                 <span className="hover:opacity-70">{contact.email.label}</span>
               </Link>
             </div>
-            <div className="flex flex-col gap-2 text-sm">
-              <span className="text-teal-200 text-xs">SOCIALS </span>
-              <div className="flex flex-row items-center gap-5">
-                {social.map((item, index) => (
-                  <Link
-                    key={index}
-                    href={item.href}
-                    className="hover:text-teal-200"
-                  >
-                    <span className="sr-only">{item.label}</span>
-                    <item.icon className={item.defaultClassName} />
-                  </Link>
-                ))}
-              </div>
-            </div>
+            
           </div>
           <div className="mx-auto md:mx-0 h-60 w-96 relative">
             <Image
