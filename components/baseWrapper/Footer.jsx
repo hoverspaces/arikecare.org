@@ -52,9 +52,7 @@ export default function Footer() {
               width="120"
               height="60"
             />
-           
-
-
+            
           </div>
           <div className="mt-1">
             <div className="flex flex-col items-start">
