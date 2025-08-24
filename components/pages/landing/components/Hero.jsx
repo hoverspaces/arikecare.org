@@ -142,9 +142,6 @@ export default function Hero() {
                   delivery of NEOMOTION wheelchairs to 80 differently abled
                   people, thereby giving them independence.
                 </Transition.Child>
-                
-                  </Link>
-                </Transition.Child>
               </Transition>
             </div>
 
