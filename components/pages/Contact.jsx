@@ -61,23 +61,7 @@ export default function Contact() {
               </Link>
             </div>
           </div>
-          <div className="flex flex-col gap-5 items-center">
-            <ShareIcon className="h-12" />
-            <div className="flex flex-row items-center gap-7">
-              {social
-                .filter((val) => val.label !== "Twitter")
-                .map((item, index) => (
-                  <Link
-                    key={index}
-                    href={item.href}
-                    className="hover:text-gray-400"
-                  >
-                    <span className="sr-only">{item.label}</span>
-                    <item.icon className={item.defaultClassName} />
-                  </Link>
-                ))}
-            </div>
-          </div>
+          
         </div>
         <div className="px-10 mt-20 flex flex-col gap-2">
           <span className="text-xl font-semibold">Send Message</span>
