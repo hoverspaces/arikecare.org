@@ -52,20 +52,9 @@ export default function Footer() {
               width="120"
               height="60"
             />
-            <div className="flex flex-row items-center gap-7">
-              {social
-                .filter((val) => val.label !== "Twitter")
-                .map((item, index) => (
-                  <Link
-                    key={index}
-                    href={item.href}
-                    className="hover:text-green-200"
-                  >
-                    <span className="sr-only">{item.label}</span>
-                    <item.icon className={item.defaultClassName} />
-                  </Link>
-                ))}
-            </div>
+           
+
+
           </div>
           <div className="mt-1">
             <div className="flex flex-col items-start">
