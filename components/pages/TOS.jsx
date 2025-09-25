@@ -62,15 +62,18 @@ const pages = {
         </p>
         <h2 className="text-xl font-semibold mb-2">Shipping</h2>
         <ul className="list-disc pl-6 space-y-2 mb-4">
+          <li>  Any goods or services offered by Arike Care comply with applicable legal requirements. 
+          While Arike primarily provides care services and support, this section ensures that 
+          obligations related to delivery, receipt, and exchange of any material items adhere to 
+          local regulations.</li>
           <li>Orders are processed within 2-3 business days of purchase.</li>
-          <li>Delivery timelines may vary based on your location, typically between 5-10 business days.</li>
           <li>Shipping charges, if applicable, will be displayed during checkout.</li>
         </ul>
         <h2 className="text-xl font-semibold mb-2">Exchange</h2>
         <ul className="list-disc pl-6 space-y-2">
-          <li>Exchanges are accepted within 7 days of receiving the product.</li>
-          <li>Products must be unused, in original packaging, and accompanied by proof of purchase.</li>
-          <li>Damaged or defective products will be replaced at no additional cost.</li>
+           <li>All items provided, if any, will follow the laws and regulations governing delivery or exchange.</li>
+          <li>Arike Care does not guarantee delivery timelines for any material items, as these may be subject to third-party service providers and legal requirements.</li>
+          <li>Exchanges or returns, if applicable, will comply with statutory obligations and the specific terms communicated at the time of provision.</li>
         </ul>
       </div>
     ),
