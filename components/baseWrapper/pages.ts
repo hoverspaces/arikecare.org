@@ -17,4 +17,5 @@ export const links = [
   { label: "Koode", link: "/koode" },
   { label: "Contact", link: "/contact" },
   { label: "Activities", link: "/activities" },
+  { label: "Terms & Conditions", link: "/tos" }
 ];
