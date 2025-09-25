@@ -58,14 +58,11 @@ const pages = {
       <div>
         <h1 className="text-3xl font-bold mb-4">Shipping and Exchange</h1>
         <p className="mb-4">
-          Our shipping and exchange policy ensures a smooth experience when ordering products from Arike Care.
+          While Arike primarily provides care services and support, this section ensures that obligations related to delivery, receipt, and exchange of any material items adhere to local regulations.
         </p>
         <h2 className="text-xl font-semibold mb-2">Shipping</h2>
         <ul className="list-disc pl-6 space-y-2 mb-4">
-          <li>  Any goods or services offered by Arike Care comply with applicable legal requirements. 
-          While Arike primarily provides care services and support, this section ensures that 
-          obligations related to delivery, receipt, and exchange of any material items adhere to 
-          local regulations.</li>
+          <li>  Any goods or services offered by Arike Care comply with applicable legal requirements. </li>
           <li>Orders are processed within 2-3 business days of purchase.</li>
           <li>Shipping charges, if applicable, will be displayed during checkout.</li>
         </ul>
