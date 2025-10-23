@@ -19,7 +19,8 @@ export default function Donate() {
       style={{
         minHeight: "100vh",
         display: "flex",
-        alignItems: "center",
+        alignItems: "flex-start",
+        paddingTop: "50px",
         justifyContent: "center",
         background: "#fafafa",
       }}
