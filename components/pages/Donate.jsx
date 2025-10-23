@@ -31,8 +31,7 @@ export default function Donate() {
     }, 3000);
   }, []);
   return (
-       <main class="container">
-      <section class="card" aria-labelledby="subscribe-title">
+
         <h1 id="subscribe-title">Subscribe</h1>
         <p>Tap the button below to start your subscription securely via Razorpay.</p>
 
@@ -47,12 +46,5 @@ export default function Donate() {
           </form>
         </div>
 
-        <noscript>
-          <p>JavaScript is required to load the payment button. Please enable JavaScript and reload this page.</p>
-        </noscript>
-
-        <small class="hint">Protected and powered by Razorpay.</small>
-      </section>
-    </main>
   );
 }
