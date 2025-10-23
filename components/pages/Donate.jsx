@@ -19,7 +19,8 @@ export default function Donate() {
       style={{
         display: "flex",
         alignItems: "flex-start",
-        paddingTop: "50px",
+        paddingTop: "80px",
+        paddingBottom: "80px",
         justifyContent: "center",
         background: "#fafafa",
       }}
