@@ -17,7 +17,6 @@ export default function Donate() {
   return (
     <div
       style={{
-        minHeight: "100vh",
         display: "flex",
         alignItems: "flex-start",
         paddingTop: "50px",
