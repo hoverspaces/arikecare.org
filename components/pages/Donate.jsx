@@ -31,33 +31,28 @@ export default function Donate() {
     }, 3000);
   }, []);
   return (
-    <div className="w-full min-h-full sm:py-10 bg-gray-200 flex items-center justify-center">
-      <div className="w-full shadow py-10 flex flex-col items-center bg-white">
-        <span className="font-semibold text-xl">Donate for Arike</span>
-        <span className="mt-3 px-4 py-2 rounded-full bg-teal-200">
-          {donatePageData.supporters} supporters
-        </span>
-        <div>
-          <div id="dmScriptContainer" style={{ display: "none" }}>
-            <a href="#">Donate Now</a>
-          </div>
-          <div
-            id="ngoContentContainer"
-            iNGOId="1262"
-            oDisplay="product"
-            oDisplayTab="once,monthly"
-            oQRCode="YES"
-          >
-            <center>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                alt="please wait..."
-                src="https://danamojo.org/dm/css/images/loading.gif"
-              />
-            </center>
-          </div>
+       <main class="container">
+      <section class="card" aria-labelledby="subscribe-title">
+        <h1 id="subscribe-title">Subscribe</h1>
+        <p>Tap the button below to start your subscription securely via Razorpay.</p>
+
+        <div class="form-wrapper">
+          <form aria-label="Razorpay subscription">
+            <script
+              src="https://cdn.razorpay.com/static/widget/subscription-button.js"
+              data-subscription_button_id="pl_RPoOHHTcmD9UXb"
+              data-button_theme="brand-color"
+              async
+            ></script>
+          </form>
         </div>
-      </div>
-    </div>
+
+        <noscript>
+          <p>JavaScript is required to load the payment button. Please enable JavaScript and reload this page.</p>
+        </noscript>
+
+        <small class="hint">Protected and powered by Razorpay.</small>
+      </section>
+    </main>
   );
 }
